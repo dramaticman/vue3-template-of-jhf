@@ -11,7 +11,8 @@ export default defineConfig({
     vue(),
     Components({
       dirs: ['src/components'],
-      resolvers: [VantResolver()]
+      resolvers: [VantResolver()],
+      dts: 'src/components.d.ts'
     }),
     AutoImport({
       // targets to transform
@@ -23,9 +24,9 @@ export default defineConfig({
       imports: ['vue', 'vue-router'],
       dirs:[
         'src/resources/custom-apis'
-      ]
+      ],
       // 可以选择auto-import.d.ts生成的位置，使用ts建议设置为'src/auto-import.d.ts'
-      // dts: 'src/auto-import.d.ts'
+      dts: 'src/auto-import.d.ts'
     })
   ],
   css:{
