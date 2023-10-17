@@ -29,16 +29,6 @@ export default defineConfig({
     })
   ],
   css:{
-    postcss:{
-      plugins: [
-        px2rem({
-          rootValue({ file }) {	// 此处的返回值应当为屏幕宽度的十分之一，75为一般设计稿的十分之一，37.5是vant的设计稿宽度所以需要特殊处理
-              return file.indexOf('vant') !== -1 ? 37.5 : 75;
-          },
-          unitPrecision: 5, //保留rem小数点多少位
-          propList: ['*','!border'] }),	// 需要转换的属性列表，*是通配符
-      ],
-    }
   },
   server:{
     host: '0.0.0.0',

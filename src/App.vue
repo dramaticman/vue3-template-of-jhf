@@ -3,8 +3,9 @@ const a = ref(0)
 </script>
 
 <template>
-  <HelloWorld></HelloWorld>
+  <!-- <HelloWorld></HelloWorld> -->
   <van-button type="primary" >{{a}}</van-button>
+  <div class="logo">123</div>
 </template>
 
 <style scoped>
